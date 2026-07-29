@@ -90,15 +90,29 @@
     </div>
   </div>
   <div id="scenario-conversation" class="hidden">
-    <div class="config-bar"><div class="container"><div class="config-pills" id="config-pills"></div><div class="session-actions"><span class="session-info" id="session-info"></span><button class="btn-secondary" onclick="downloadPdf()">Export PDF</button><button class="btn-secondary" id="briefing-btn" onclick="downloadBriefing()" disabled>Generate briefing</button><button class="btn-secondary" onclick="newSession()">⌂ New session</button></div></div></div>
-    <div class="chat-scroll" id="chat-scroll"><div class="container"><div class="chat-area" id="chat-area"></div></div></div>
-    <div class="followup-input"><div class="container">
-      <div class="composer">
-        <textarea id="followup-field" rows="1" placeholder="Ask a follow-up, or start a new scenario…"></textarea>
-        <button class="composer-send" onclick="submitFollowup()" aria-label="Send">↑</button>
+    <div class="container session-layout">
+      <div class="session-main">
+        <div class="chat-scroll" id="chat-scroll"><div class="chat-area" id="chat-area"></div></div>
+        <div class="followup-input">
+          <div class="composer">
+            <textarea id="followup-field" rows="1" placeholder="Ask a follow-up, or start a new scenario…"></textarea>
+            <button class="composer-send" onclick="submitFollowup()" aria-label="Send">↑</button>
+          </div>
+          <div class="composer-hint">Enter to send · Shift + Enter for a new line</div>
+        </div>
       </div>
-      <div class="composer-hint">Enter to send · Shift + Enter for a new line</div>
-    </div></div>
+      <aside class="session-panel">
+        <div class="panel-context">
+          <div class="session-info" id="session-info"></div>
+          <dl class="panel-settings" id="panel-settings"></dl>
+        </div>
+        <div class="panel-actions">
+          <button class="panel-btn" onclick="downloadPdf()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Export PDF</button>
+          <button class="panel-btn" id="briefing-btn" onclick="downloadBriefing()" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Generate briefing</button>
+          <button class="panel-btn" onclick="newSession()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>New session</button>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
 
