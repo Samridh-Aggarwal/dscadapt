@@ -114,13 +114,12 @@ function renderMsg(role, content, time, meta, refs, sources, thinking) {
   return h;
 }
 
-function renderPills() {
+function renderSidePanel() {
   const s = (S.activeSession && S.activeSession.settings) || S.settings;
-  document.getElementById('config-pills').innerHTML = `
-    <div class="pill accent"><span class="pill-label">Mode</span> ${s.audience}</div>
-    <div class="pill"><span class="pill-label">Country</span> ${s.country}</div>
-    <div class="pill"><span class="pill-label">Language</span> ${s.language}</div>
-    <div class="pill"><span class="pill-label">Length</span> ${s.length}</div>`;
+  document.getElementById('panel-settings').innerHTML = [
+    ['Mode', s.audience], ['Country', s.country],
+    ['Language', s.language], ['Length', s.length],
+  ].map(([k, v]) => `<dt>${k}</dt><dd>${escapeHtml(v || '\u2014')}</dd>`).join('');
 }
 
 function renderSessionInfo() {
@@ -193,7 +192,7 @@ function startSession(q) {
     messages: [],
   };
   showConversation();
-  renderPills();
+  renderSidePanel();
   document.getElementById('chat-area').innerHTML = '';
   save();
   sendMessage(q);
@@ -202,7 +201,7 @@ function startSession(q) {
 function restoreSession() {
   if (!S.activeSession) return;
   showConversation();
-  renderPills();
+  renderSidePanel();
   const chat = document.getElementById('chat-area');
   chat.innerHTML = '';
   S.activeSession.messages.forEach((m) => {
