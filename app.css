@@ -111,28 +111,29 @@ body.dark .evidence-tags span:hover{background:rgba(255,255,255,.15)}
 /* Conversation is two columns: the transcript scrolls on the left, session
    context and actions sit in a static panel on the right. Below 1000px the
    panel reflows into a single strip above the transcript. */
-.session-layout{display:flex;gap:20px;flex:1;min-height:0}
+.session-layout{display:flex;gap:34px;flex:1;min-height:0}
 .session-main{display:flex;flex-direction:column;flex:1;min-width:0}
 .chat-scroll{flex:1;overflow-y:auto;min-height:0}
 .chat-area{padding:24px 0 8px}
-.session-panel{width:180px;flex-shrink:0;display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px 0 26px}
-.session-info{font-size:11px;color:var(--text-tertiary);margin-bottom:12px}
-.panel-settings{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;margin:0;font-size:12px}
+.session-panel{width:200px;flex-shrink:0;display:flex;flex-direction:column;justify-content:space-between;padding:16px 0 34px}
+.panel-context{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:background .3s,border-color .3s}
+.session-info{font-size:12px;color:var(--text-secondary);padding:11px 14px;border-bottom:1px solid var(--border-light)}
+.panel-settings{display:grid;grid-template-columns:auto 1fr;gap:9px 10px;margin:0;padding:12px 14px;font-size:13px}
 .panel-settings dt{color:var(--text-tertiary)}
-.panel-settings dd{margin:0;text-align:right;color:var(--text-secondary)}
-.panel-actions{display:flex;flex-direction:column;gap:6px}
-.panel-btn{display:flex;align-items:center;gap:8px;width:100%;padding:8px 11px;font-family:var(--sans);font-size:12.5px;text-align:left;color:var(--text-secondary);background:transparent;border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:all .15s}
+.panel-settings dd{margin:0;text-align:right;color:var(--text)}
+.panel-actions{display:flex;flex-direction:column;gap:8px}
+.panel-btn{display:flex;align-items:center;gap:10px;width:100%;padding:11px 14px;font-family:var(--sans);font-size:13.5px;text-align:left;color:var(--text-secondary);background:var(--surface);border:1px solid var(--border);border-radius:9px;cursor:pointer;transition:all .15s}
 .panel-btn:hover{border-color:var(--accent);color:var(--text);background:var(--surface)}
-.panel-btn svg{width:15px;height:15px;flex-shrink:0}
+.panel-btn svg{width:16px;height:16px;flex-shrink:0}
 .panel-btn:disabled{opacity:.4;cursor:not-allowed}
-.panel-btn:disabled:hover{border-color:var(--border);color:var(--text-secondary);background:transparent}
+.panel-btn:disabled:hover{border-color:var(--border);color:var(--text-secondary);background:var(--surface)}
 
 @media(max-width:1000px){
   .session-layout{flex-direction:column;gap:0}
   .session-panel{width:auto;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:12px 0;border-bottom:1px solid var(--border-light)}
-  .panel-context{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .session-info{margin-bottom:0}
-  .panel-settings{display:flex;gap:0}
+  .panel-context{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:transparent;border:none;border-radius:0}
+  .session-info{padding:0;border-bottom:none}
+  .panel-settings{display:flex;gap:0;padding:0}
   .panel-settings dt{display:none}
   .panel-settings dd{text-align:left}
   .panel-settings dd::after{content:'\00b7';margin:0 7px;color:var(--text-tertiary)}
