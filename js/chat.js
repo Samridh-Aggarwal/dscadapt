@@ -3,9 +3,14 @@
 
 /* ------------------------------------------------------------ composer --- */
 
+// The composer sits level with the three panel buttons, so it starts at their
+// combined height and only grows from there.
+const COMPOSER_MIN = 112;
+const COMPOSER_MAX = 220;
+
 function autosize(el) {
   el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 160) + 'px';
+  el.style.height = Math.max(COMPOSER_MIN, Math.min(el.scrollHeight, COMPOSER_MAX)) + 'px';
 }
 
 // Enter sends, Shift+Enter inserts a newline.
