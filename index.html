@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSCAdapt · Decision Support for Climate Adaptation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="container-wide header-inner">
+    <div class="brand" onclick="newSession()">
+      <h1>DSCAdapt</h1>
+    </div>
+    <div class="header-right">
+      <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">☽ Dark</button>
+      <div class="header-meta">
+        <a href="https://www.idalertproject.eu/" target="_blank" rel="noopener">IDAlert Project</a> · Horizon Europe<br>
+        Grantham Research Institute · LSE
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container-wide nav-inner" id="nav-tabs">
+    <button class="nav-item active" data-tab="scenario" onclick="route('scenario')">Scenario analysis</button>
+    <button class="nav-item" data-tab="document" onclick="route('document')">Evaluate a document</button>
+    <button class="nav-item" data-tab="export" onclick="route('export')">Sessions &amp; export</button>
+    <button class="nav-item" data-tab="evidence" onclick="route('evidence')">Evidence base</button>
+    <button class="nav-item" data-tab="pathways" onclick="route('pathways')">Pathway explorer</button>
+    <button class="nav-item" data-tab="about" onclick="route('about')">About &amp; methods</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== SCENARIO TAB ===== -->
+<section class="tab-panel active" id="tab-scenario">
+  <div id="scenario-landing">
+    <div class="container scenario-landing">
+      <div class="hero">
+        <h2>How does climate adaptation affect infectious disease risk?</h2>
+        <p>Describe an adaptation measure, a location, and a sector. DSCAdapt analyses the co-benefits and trade-offs using IDAlert's curated evidence base.</p>
+      </div>
+      <div class="setup-panel">
+        <div class="setup-row">
+          <div class="setup-group"><label>Audience</label>
+            <div class="mode-toggle" id="audience-toggle">
+              <span data-value="Policymaker" class="active">Policymaker</span>
+              <span data-value="Researcher">Researcher</span> 
+            </div>
+          </div>
+          <div class="setup-group"><label>Country focus</label>
+            <div class="select-wrapper"><select id="country-select"><option>All Europe</option><option>Austria</option><option>Belgium</option><option>Bulgaria</option><option>Croatia</option><option>Cyprus</option><option>Czechia</option><option>Denmark</option><option>Estonia</option><option>Finland</option><option>France</option><option>Germany</option><option>Greece</option><option>Hungary</option><option>Iceland</option><option>Ireland</option><option>Italy</option><option>Latvia</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Malta</option><option>Netherlands</option><option>Norway</option><option>Poland</option><option>Portugal</option><option>Romania</option><option>Slovakia</option><option>Slovenia</option><option>Spain</option><option>Sweden</option><option>Switzerland</option><option>United Kingdom</option></select></div>
+          </div>
+          <div class="setup-group"><label>Language</label>
+            <div class="select-wrapper"><select id="language-select"><option>English</option><option>Čeština</option><option>Dansk</option><option>Deutsch</option><option>Eesti</option><option>Español</option><option>Français</option><option>Gaeilge</option><option>Hrvatski</option><option>Íslenska</option><option>Italiano</option><option>Latviešu</option><option>Lietuvių</option><option>Malti</option><option>Magyar</option><option>Nederlands</option><option>Norsk</option><option>Polski</option><option>Português</option><option>Română</option><option>Slovenčina</option><option>Slovenščina</option><option>Suomi</option><option>Svenska</option><option>Български</option><option>Ελληνικά</option></select></div>
+          </div>
+          <div class="setup-group"><label>Length</label>
+            <div class="select-wrapper"><select id="length-select"><option>Standard</option><option>Brief</option><option>Detailed</option></select></div>
+          </div>
+        </div>
+        <div class="setup-meta">
+          <div class="evidence-count"><span class="dot"></span><span id="evidence-summary">Evidence base</span></div>
+          <span id="length-meta">Response length: standard (200–400 words)</span>
+        </div>
+      </div>
+      <div class="entry-section">
+        <h3>Or start with a common scenario</h3>
+        <div class="entry-grid" id="entry-grid">
+          <button class="entry-card" data-prompt="We're planning storm drain retrofits in a coastal Italian city to manage urban flooding. What infectious disease trade-offs should we be aware of, and are there examples of how other cities have handled this?"><div class="entry-type scenario">Scenario analysis</div><div class="entry-title">Storm drain retrofit programme</div><div class="entry-desc">What infectious disease considerations should a city account for when retrofitting storm water infrastructure? Draws on the Barcelona case study.</div></button>
+          <button class="entry-card" data-prompt="We are planning to expand urban green and blue spaces in Valencia. What are the key infectious disease considerations, and how should the choice between new wetlands and expanded existing parks affect our decision?"><div class="entry-type compare">Compare measures</div><div class="entry-title">Urban greening options</div><div class="entry-desc">Compare disease implications of urban wetlands, blue spaces, and traditional parks for a Mediterranean city.</div></button>
+          <button class="entry-card" data-prompt="What climate-sensitive infectious diseases are most relevant for adaptation planning in Northern Europe, and how does vector establishment differ from Southern Europe?"><div class="entry-type explore">Explore risks</div><div class="entry-title">Disease risks by region</div><div class="entry-desc">Which climate-sensitive infectious diseases are relevant for a specific European region?</div></button>
+          <button class="entry-card" data-prompt="A German city is lowering the temperature in its district heating network to save energy. What infectious disease risks should we consider, and how strong is the evidence?"><div class="entry-type local">Local implementation</div><div class="entry-title">District heating energy measures</div><div class="entry-desc">What infectious disease risks arise from energy-efficiency retrofits in building infrastructure?</div></button>
+        </div>
+      </div>
+      <div class="input-section"><div style="max-width:780px;margin:0 auto">
+        <div class="composer">
+          <textarea id="main-input" rows="1" placeholder="Describe your adaptation scenario, location, and what you&rsquo;d like to understand…"></textarea>
+          <button class="composer-send" onclick="submitMainQuery()" aria-label="Send">↑</button>
+        </div>
+        <div class="composer-hint">Enter to send · Shift + Enter for a new line</div>
+      </div></div>
+      <div class="evidence-strip"><h4>Currently in the evidence base</h4><div class="evidence-tags"><span onclick="openEvidence('water')">Water management</span><span onclick="openEvidence('flood')">Flood protection</span><span onclick="openEvidence('green')">Green &amp; blue spaces</span><span onclick="openEvidence('building')">Building standards</span><span onclick="openEvidence('retrofit')">Retrofitting</span><span onclick="openEvidence('coastal')">Coastal &amp; marine</span><span onclick="openEvidence('farming')">Sustainable farming</span><span onclick="openEvidence('food')">Food safety</span><span onclick="openEvidence('tourism')">Tourism</span><span onclick="openEvidence('transport')">Transport</span><span onclick="openEvidence('barcelona')">Barcelona case study</span></div></div>
+    </div>
+  </div>
+  <div id="scenario-conversation" class="hidden">
+    <div class="config-bar"><div class="container"><div class="config-pills" id="config-pills"></div><div class="session-actions"><span class="session-info" id="session-info"></span><button class="btn-secondary" onclick="downloadPdf()">Export PDF</button><button class="btn-secondary" id="briefing-btn" onclick="downloadBriefing()" disabled>Generate briefing</button><button class="btn-secondary" onclick="newSession()">⌂ New session</button></div></div></div>
+    <div class="chat-scroll" id="chat-scroll"><div class="container"><div class="chat-area" id="chat-area"></div></div></div>
+    <div class="followup-input"><div class="container">
+      <div class="composer">
+        <textarea id="followup-field" rows="1" placeholder="Ask a follow-up, or start a new scenario…"></textarea>
+        <button class="composer-send" onclick="submitFollowup()" aria-label="Send">↑</button>
+      </div>
+      <div class="composer-hint">Enter to send · Shift + Enter for a new line</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== DOCUMENT TAB ===== -->
+<section class="tab-panel" id="tab-document">
+  <div class="container document-tab">
+    <div class="page-header"><h2>Evaluate a policy document</h2><p>Upload or paste an adaptation strategy, project plan, or policy brief. DSCAdapt flags where the evidence base links a measure in it to an infectious-disease risk the document does not appear to address.</p></div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;font-size:14px"><span style="color:var(--text-secondary)">Review for country:</span><div class="select-wrapper"><select id="doc-country"><option>All Europe</option><option>Austria</option><option>Belgium</option><option>Bulgaria</option><option>Croatia</option><option>Cyprus</option><option>Czechia</option><option>Denmark</option><option>Estonia</option><option>Finland</option><option>France</option><option>Germany</option><option>Greece</option><option>Hungary</option><option>Iceland</option><option>Ireland</option><option>Italy</option><option>Latvia</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Malta</option><option>Netherlands</option><option>Norway</option><option>Poland</option><option>Portugal</option><option>Romania</option><option>Slovakia</option><option>Slovenia</option><option>Spain</option><option>Sweden</option><option>Switzerland</option><option>United Kingdom</option></select></div></div>
+    <label class="dropzone" id="dropzone"><input type="file" id="file-input" accept=".txt,.md,.pdf,.docx"><div class="dropzone-icon">↑</div><h3 id="dropzone-title">Drop a document here</h3><p id="dropzone-sub">or click to browse · PDF, Word, or text</p></label>
+    <div style="text-align:center;color:var(--text-tertiary);font-size:13px;margin:-8px 0 14px">— or paste the text —</div>
+    <textarea id="doc-paste" placeholder="Paste your policy or adaptation text here…" style="width:100%;min-height:150px;padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);font-family:inherit;font-size:14px;resize:vertical;box-sizing:border-box"></textarea>
+    <div style="text-align:center;margin:16px 0"><button class="btn-primary" id="doc-review-btn">Review document</button></div>
+    <div id="doc-result"></div>
+  </div>
+</section>
+
+<!-- ===== SESSIONS TAB ===== -->
+<section class="tab-panel" id="tab-export">
+  <div class="container export-tab"><div class="page-header"><h2>Sessions &amp; export</h2><p>Every scenario analysis session is saved locally. Open a past session or export as PDF.</p></div><div id="session-list-container"></div></div>
+</section>
+
+<!-- ===== EVIDENCE BASE TAB ===== -->
+<section class="tab-panel" id="tab-evidence">
+  <div class="container-wide evidence-tab">
+    <div class="page-header"><h2>Evidence base</h2><p>A comprehensive analysis of ecological and biological scientific research, climate policies, adaptation practices, and latest health literature and data to construct risk pathways between climate measures and infectious disease outcomes.</p></div>
+    <div class="evidence-controls"><input type="text" class="evidence-search" id="evidence-search" placeholder="Search measures, diseases, mechanisms…"><div class="filter-chips" id="filter-chips"><button class="chip active" data-filter="all">All</button><button class="chip" data-filter="water">Water &amp; flood</button><button class="chip" data-filter="coastal">Coastal</button><button class="chip" data-filter="food">Food &amp; agriculture</button><button class="chip" data-filter="buildings">Buildings &amp; urban</button><button class="chip" data-filter="tourism">Tourism</button><button class="chip" data-filter="transport">Transport</button><button class="chip" data-filter="energy">Energy</button><button class="chip" data-filter="case">Case studies</button></div></div>
+    <div id="evidence-results"></div>
+  </div>
+  <div class="detail-overlay" id="doc-detail-overlay" onclick="closeDocDetail(event)"><div class="detail-panel" onclick="event.stopPropagation()"><button class="detail-close" onclick="closeDocDetail()">×</button><div id="doc-detail-content"></div></div></div>
+</section>
+
+<!-- ===== PATHWAY EXPLORER TAB ===== -->
+<section class="tab-panel" id="tab-pathways">
+  <div class="container-wide px-wrap">
+    <div class="px-top">
+      <div>
+        <h2>Pathway explorer</h2>
+        <p>Trace how climate adaptation measures connect to infectious disease risk. Start with a policy sector — each selection reveals the next column in the chain.</p>
+      </div>
+      <a class="px-pdf-btn" href="https://drive.google.com/uc?export=download&id=1aN2racOYV2ObQtrRVfznhOvAtFa-8IaQ" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download full diagram (PDF)
+      </a>
+    </div>
+    <div id="px-root"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT TAB ===== -->
+<section class="tab-panel" id="tab-about">
+  <div class="container about-tab">
+    <div class="about-section"><div class="eyebrow">§ 01 · Overview</div><h2>Pathways, not <span class="italic">predictions</span>.</h2><p class="lede">DSCAdapt is a retrieval-augmented language tool for European policymakers working on climate adaptation. It reasons in terms of pathways — the ecological and infrastructural mechanisms that link a given measure to disease transmission, exposure, or vulnerability — rather than generating forecasts or recommendations.</p><p>Every claim is tied back to the IDAlert evidence base or current web sources through explicit references. The tool uses conditional language because these are plausible scenarios shaped by local context, not deterministic outcomes. Where evidence is thin or conflicting, the tool says so.</p><div class="two-col"><div><h3>Who it is for</h3><p>Municipal and national climate adaptation officers, public health policy leads, and researchers across the IDAlert consortium.</p></div><div><h3>What it isn't</h3><p>Not medical advice. Not epidemiological surveillance. Not a substitute for local expertise. An evidence-synthesis tool meant to sit alongside those sources.</p></div></div></div>
+    <div class="about-section"><div class="eyebrow">§ 02 · Architecture</div><h2>How a question becomes an <span class="italic">answer</span>.</h2><p class="lede">Five stages: a routing model classifies the question, retrieval pulls relevant evidence, an optional web-search agent gathers current context, a generation model synthesises the response, and the output is rendered or exported.</p><div class="pipeline"><div class="step"><div class="step-num">01 · Route</div><h4>Classify</h4><p>Rewrites follow-ups, enforces scope, picks retrieval paths. Out-of-scope queries redirected before generation.</p><div class="model">ministral-8b</div></div><div class="step"><div class="step-num">02 · Retrieve</div><h4>Pull evidence</h4><p>Hybrid cosine (85%) + IDF keyword (15%), deduplicates per section, returns top-k chunks with references.</p><div class="model">mistral-embed</div></div><div class="step"><div class="step-num">03 · Context</div><h4>Current conditions</h4><p>Web-search agent pulls supplementary current legislation, policy, or geographic context. Kept separate from curated evidence.</p><div class="model">mistral-medium</div></div><div class="step"><div class="step-num">04 · Generate</div><h4>Synthesise</h4><p>Generation model produces the response against a system prompt enforcing scope, citations, and the co-benefit/trade-off split.</p><div class="model">mistral-small</div></div><div class="step"><div class="step-num">05 · Deliver</div><h4>Read or export</h4><p>Responses in chat or exported as formatted PDF briefings with references preserved.</p><div class="model">PDF</div></div></div></div>
+    <div class="about-section"><div class="eyebrow">§ 03 · Limitations</div><h2>What it <span class="italic">will</span> and won't do.</h2><div class="limit-list"><div class="limit-item"><span class="mark yes">Will</span><h4>Surface co-benefits and trade-offs</h4><p>Reasons through both positive and negative implications for infectious disease risk, with references.</p></div><div class="limit-item"><span class="mark no">Won't</span><h4>Predict outbreaks</h4><p>A retrieval-augmented language system, not a forecasting model.</p></div><div class="limit-item"><span class="mark yes">Will</span><h4>Work in multiple EU languages</h4><p>Responses are returned in the language of the query.</p></div><div class="limit-item"><span class="mark no">Won't</span><h4>Give medical advice</h4><p>Operates at the population and policy level, not the clinical level.</p></div><div class="limit-item"><span class="mark yes">Will</span><h4>Acknowledge its own gaps</h4><p>Where the evidence base doesn't cover a topic, the tool says so explicitly.</p></div><div class="limit-item"><span class="mark no">Won't</span><h4>Make recommendations</h4><p>Lays out evidence and trade-offs. The judgement belongs to policymakers.</p></div><div class="limit-item"><span class="mark yes">Will</span><h4>Cite its sources</h4><p>Every response includes a reference list tracing claims back to pathway documents or web sources.</p></div><div class="limit-item"><span class="mark no">Won't</span><h4>Replace local expertise</h4><p>Epidemiological judgement and ground knowledge from public health authorities remain essential.</p></div></div></div>
+    <div class="about-section"><div class="eyebrow">§ 05 · Provenance</div><h2>Built at <span class="italic">LSE</span> under IDAlert.</h2><p>DSCAdapt is developed at the <strong>Grantham Research Institute on Climate Change and the Environment</strong>, London School of Economics, as part of the <strong>IDAlert project</strong> (Infectious Disease decision-support tools and Alert systems), funded by the European Union's Horizon Europe research and innovation programme under grant agreement <strong>No. 101057554</strong>.</p><p>The tool is part of IDAlert's Work Package 2, which focuses on indicators for monitoring climate-induced infectious disease risk and emergence. The wider consortium includes 18 partner institutions across seven EU member states, plus the United Kingdom and Bangladesh.</p><p style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border-light);font-size:13px;color:var(--text-tertiary)">For access, collaboration enquiries, or bug reports: <a href="mailto:s.aggarwal28@lse.ac.uk" style="color:var(--accent)">s.aggarwal28@lse.ac.uk</a> · The tool is in research preview and access is currently limited to IDAlert consortium members and invited European policymakers.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="app-footer"><div class="container-wide footer-inner"><div class="footer-disclaimer">DSCAdapt is a research instrument in active development. Responses are AI-generated and may contain errors. The tool presents potential outcomes — it does not constitute policy advice.</div><div>IDAlert · Grant No. 101057554<br>© 2026 Grantham Research Institute, LSE</div></div></footer>
+
+
+
+<div class="dp-overlay" id="disease-profile-overlay" onclick="closeDiseaseProfile(event)">
+  <div class="dp-panel" onclick="event.stopPropagation()">
+    <button class="dp-close" onclick="closeDiseaseProfile()" aria-label="Close">×</button>
+    <h2 class="dp-title" id="disease-profile-title"></h2>
+    <div class="dp-body" id="disease-profile-body"></div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/evidence.js"></script>
+<script src="js/explorer.js"></script>
+<script src="js/review.js"></script>
+</body>
+</html>

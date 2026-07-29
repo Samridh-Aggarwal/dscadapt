@@ -1,0 +1,741 @@
+{
+ "families": [
+  {
+   "family": "water",
+   "name": "Water & flood management"
+  },
+  {
+   "family": "coastal",
+   "name": "Coastal & marine"
+  },
+  {
+   "family": "food",
+   "name": "Food & agriculture"
+  },
+  {
+   "family": "buildings",
+   "name": "Buildings & urban"
+  },
+  {
+   "family": "tourism",
+   "name": "Tourism"
+  },
+  {
+   "family": "transport",
+   "name": "Transport & mobility"
+  },
+  {
+   "family": "energy",
+   "name": "Energy"
+  },
+  {
+   "family": "case",
+   "name": "Case studies"
+  }
+ ],
+ "documents": [
+  {
+   "id": "1.1",
+   "family": "water",
+   "title": "Water storage, distribution & reuse",
+   "summary": "Measures to capture, store, and reuse water. Co-benefits and trade-offs for waterborne pathogens, vector breeding, and distribution contamination.",
+   "co": 2,
+   "tr": 1,
+   "intro": "Climate change threatens European water security through shifting precipitation patterns and extreme weather events, which risk contaminating supplies and damaging ecosystems. Sustainable water management, supported by the Water Framework Directive and the 2025 European Water Resilience Strategy, seeks to ensure equitable access to clean water while restoring the natural water cycle.",
+   "measures": "<li><strong>Storage:</strong> Rainwater capture, desalinisation, Aquifer Storage and Recovery (ASR), and atmospheric water harvesting.</li><li><strong>Distribution:</strong> Water rationing, sustainable irrigation, infrastructure leak reduction, inter-basin transfers, and dual piping systems.</li><li><strong>Reuse:</strong> Rainwater purification, greywater systems, industrial recycling, and nature-based solutions such as constructed wetlands.</li><li><strong>Combination:</strong> Drought and flood management plans, water pricing reforms, smart metering, and traditional Johads (percolation ponds).</li>",
+   "mechanisms": [
+    {
+     "m": "Safe/clean water resources",
+     "t": "co-benefit",
+     "d": "Cholera, Cryptosporidiosis, E. coli",
+     "detail": "<p>Maintaining safe and clean water resources provides critical public health co-benefits, largely associated with a reduction in human exposure to disease. By mitigating the impacts of climate extremes, storage and reuse measures can help secure the reliable access required for essential hygiene practices, which is vital for preventing the transmission of waterborne illnesses.</p><p>A systemic approach to water distribution is highlighted as most effective in minimising disease risk by ensuring equitable hygiene and preventing underserved or vulnerable populations from becoming hotspots for pathogen exposure. Prioritizing accessibility and accounting for demographic barriers ensures that no specific groups are left with reduced access during emergencies. Additionally, water efficiency and reuse measures can reduce pressure on freshwater sources, potentially supporting biodiversity and ecological balance. This improved ecosystem health can increase overall resilience and limit opportunities for disease emergence.</p>"
+    },
+    {
+     "m": "Safe seafood supply",
+     "t": "co-benefit",
+     "d": "Vibriosis, Norovirus, Hepatitis A"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "WNV, dengue, malaria, chikungunya",
+     "detail": "<p>If implemented poorly or without considering relevant risk factors, water management measures carry significant risks of creating trade-offs for disease transmission. Stagnant or standing water in storage systems can serve as ideal breeding grounds for mosquitoes, increasing the risk of vector-borne diseases such as malaria, dengue fever, and West Nile virus. Furthermore, without adequate monitoring of quality, stored or reused water can host pathogens, potentially leading to outbreaks of cholera, hepatitis A, and dysentery.</p><p>To reduce these trade-offs, several mitigation interventions are identified as necessary to consider:</p><ul><li><strong>Infrastructural Design:</strong> Efforts include sealing or screening all entry points to storage systems and ensuring tanks are impervious to light to prevent algal growth. Pond sides should be designed to be smooth and without pockets that could collect stagnant water.</li><li><strong>System Maintenance:</strong> Distribution networks can be upgraded with sufficient gradients to prevent stagnant water collection, and gutters should be kept clear of debris.</li><li><strong>Community and Household Action:</strong> Measures involve using household purification systems, eliminating open water containers to prevent mosquito development, and providing public education on safe storage practices.</li></ul>"
+    }
+   ],
+   "listed": 3,
+   "source": "1.1. Water storage, distrubution and reuse"
+  },
+  {
+   "id": "1.2",
+   "family": "water",
+   "title": "Wastewater management",
+   "summary": "Treatment upgrades, decentralised systems, water reuse. Implications for enteric pathogens, Legionella, and AMR.",
+   "co": 4,
+   "tr": 3,
+   "mechanisms": [
+    {
+     "m": "Safe/clean water resources",
+     "t": "co-benefit",
+     "d": "Cholera, Hepatitis A, E. coli"
+    },
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "General"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "Legionella, mosquito-borne diseases"
+    }
+   ],
+   "listed": 3,
+   "source": "1.2. Wastewater management"
+  },
+  {
+   "id": "1.3",
+   "family": "water",
+   "title": "Water quality monitoring",
+   "summary": "Surveillance for drinking and recreational water. Co-benefits for early outbreak detection.",
+   "co": 3,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Disease detection",
+     "t": "co-benefit",
+     "d": "Cholera, Cryptosporidiosis, Legionella"
+    },
+    {
+     "m": "Safe/clean water resources",
+     "t": "co-benefit",
+     "d": "Waterborne diseases"
+    }
+   ],
+   "listed": 2,
+   "source": "1.3. Water quality monitoring"
+  },
+  {
+   "id": "1.4",
+   "family": "water",
+   "title": "Awareness raising & information sharing",
+   "summary": "Public risk communication on water safety and adaptation.",
+   "co": 2,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Disease prevention",
+     "t": "co-benefit",
+     "d": "Waterborne diseases"
+    },
+    {
+     "m": "Reduced exposure to flood water",
+     "t": "co-benefit",
+     "d": "Leptospirosis"
+    }
+   ],
+   "listed": 2,
+   "source": "1.4. Awareness raising and information sharing"
+  },
+  {
+   "id": "1.5",
+   "family": "water",
+   "title": "Early warning systems for flood risk",
+   "summary": "Forecast-based alert systems for flood-prone regions.",
+   "co": 4,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Reduced exposure to flood water",
+     "t": "co-benefit",
+     "d": "Leptospirosis, E. coli, Cryptosporidiosis"
+    },
+    {
+     "m": "Disease detection",
+     "t": "co-benefit",
+     "d": "Waterborne outbreaks"
+    }
+   ],
+   "listed": 2,
+   "source": "1.5. Early Warning Systems for Flood Risk"
+  },
+  {
+   "id": "1.6",
+   "family": "water",
+   "title": "Flood protection",
+   "summary": "Structural and nature-based flood defences. Reduced waterborne exposure balanced against vector habitat in retention features.",
+   "co": 4,
+   "tr": 3,
+   "mechanisms": [
+    {
+     "m": "Reduced exposure to flood water",
+     "t": "co-benefit",
+     "d": "Leptospirosis, E. coli, Giardia"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "WNV, dengue, Culex mosquitoes"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Various"
+    },
+    {
+     "m": "Land use conflict",
+     "t": "trade-off",
+     "d": "Indirect"
+    }
+   ],
+   "listed": 4,
+   "source": "1.6. Flood Protection"
+  },
+  {
+   "id": "2.1",
+   "family": "coastal",
+   "title": "Marine spatial planning",
+   "summary": "Coastal area zoning. Implications for water quality, shellfish safety.",
+   "co": 3,
+   "tr": 2,
+   "mechanisms": [
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "Vibriosis, Norovirus"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Vibriosis"
+    }
+   ],
+   "listed": 2,
+   "source": "Pathway summary 2.1 marine spatial planning"
+  },
+  {
+   "id": "2.2",
+   "family": "coastal",
+   "title": "Reducing ocean acidification",
+   "summary": "CO₂ load reduction on marine systems. Pathogen ecology in shellfish.",
+   "co": 2,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "Vibriosis"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Marine pathogens"
+    }
+   ],
+   "listed": 2,
+   "source": "Pathway summary 2.2 reduce ocean acidification"
+  },
+  {
+   "id": "3.1",
+   "family": "food",
+   "title": "Sustainable farming strategies",
+   "summary": "Regenerative, diversified farming. Zoonotic risk shifts, AMR, foodborne pathogens.",
+   "co": 4,
+   "tr": 3,
+   "mechanisms": [
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "Zoonotic diseases"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "Hantavirus, Leptospirosis"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Various zoonotic"
+    }
+   ],
+   "listed": 3,
+   "source": "3.1 Sustainable farming strategies"
+  },
+  {
+   "id": "3.2",
+   "family": "food",
+   "title": "Irrigation systems",
+   "summary": "Efficient and alternative-source irrigation. Vector habitat, wastewater reuse safety.",
+   "co": 3,
+   "tr": 4,
+   "mechanisms": [
+    {
+     "m": "Safe/clean water resources",
+     "t": "co-benefit",
+     "d": "E. coli, Cryptosporidiosis"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "WNV, dengue, malaria"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Various"
+    }
+   ],
+   "listed": 3,
+   "source": "3.2. Irrigation Systems"
+  },
+  {
+   "id": "3.3",
+   "family": "food",
+   "title": "Protect biodiversity & natural resources",
+   "summary": "Conservation and species diversity. Dilution effects for vector-borne diseases.",
+   "co": 5,
+   "tr": 3,
+   "mechanisms": [
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "Vector-borne (dilution effect)"
+    },
+    {
+     "m": "Increased human presence in natural areas",
+     "t": "trade-off",
+     "d": "Lyme, TBE, hantavirus"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Various"
+    }
+   ],
+   "listed": 3,
+   "source": "3.3. Protect biodiversity and natural resources"
+  },
+  {
+   "id": "3.4",
+   "family": "food",
+   "title": "Expand forested & natural areas",
+   "summary": "Afforestation and rewilding. Reduced heat-driven vector expansion vs. increased tick habitat.",
+   "co": 3,
+   "tr": 4,
+   "mechanisms": [
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "Dilution effects"
+    },
+    {
+     "m": "Safe/clean water resources",
+     "t": "co-benefit",
+     "d": "Waterborne pathogen filtration"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "Lyme, TBE"
+    },
+    {
+     "m": "Increased human presence in natural areas",
+     "t": "trade-off",
+     "d": "Lyme, TBE, hantavirus"
+    },
+    {
+     "m": "Land use conflict",
+     "t": "trade-off",
+     "d": "Indirect vulnerability"
+    }
+   ],
+   "listed": 5,
+   "source": "3.4. Expand forested and natural areas"
+  },
+  {
+   "id": "3.5",
+   "family": "food",
+   "title": "Plant-based diets",
+   "summary": "Dietary shifts reducing animal-source food. Zoonotic risk reduction.",
+   "co": 4,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "Zoonotic disease reduction"
+    },
+    {
+     "m": "Disease prevention",
+     "t": "co-benefit",
+     "d": "Salmonella, Campylobacter"
+    }
+   ],
+   "listed": 2,
+   "source": "3.5 Plant-based diets"
+  },
+  {
+   "id": "3.6",
+   "family": "food",
+   "title": "Improved food safety systems & regulations",
+   "summary": "Regulatory and surveillance improvements for foodborne pathogen control.",
+   "co": 5,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Disease prevention",
+     "t": "co-benefit",
+     "d": "Salmonella, Campylobacter, Listeriosis, E. coli"
+    },
+    {
+     "m": "Disease detection",
+     "t": "co-benefit",
+     "d": "Foodborne outbreaks"
+    }
+   ],
+   "listed": 2,
+   "source": "3.6. Improved food safety systems and regulations"
+  },
+  {
+   "id": "3.7",
+   "family": "food",
+   "title": "Food safety education & outreach",
+   "summary": "Consumer education on safe food handling.",
+   "co": 3,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Disease prevention",
+     "t": "co-benefit",
+     "d": "Salmonella, Campylobacter, Norovirus"
+    }
+   ],
+   "listed": 1,
+   "source": "3.7. Food safety education and outreach"
+  },
+  {
+   "id": "4.1",
+   "family": "buildings",
+   "title": "Increasing green & blue spaces",
+   "summary": "Urban greening and water features. Reduced heat vs. vector habitat and tick exposure.",
+   "co": 4,
+   "tr": 4,
+   "mechanisms": [
+    {
+     "m": "Reduced exposure to flood water",
+     "t": "co-benefit",
+     "d": "Leptospirosis, waterborne"
+    },
+    {
+     "m": "Heat management",
+     "t": "co-benefit",
+     "d": "Legionella, Vibrio, Salmonella"
+    },
+    {
+     "m": "Improved indoor & outdoor air quality",
+     "t": "co-benefit",
+     "d": "Respiratory pathogens"
+    },
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "General"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "WNV, dengue, chikungunya, Lyme, TBE"
+    },
+    {
+     "m": "Allergies & respiratory issues",
+     "t": "trade-off",
+     "d": "Non-infectious (excluded from scope)"
+    }
+   ],
+   "listed": 6,
+   "source": "4.1. Increasing green and blue spaces"
+  },
+  {
+   "id": "4.2",
+   "family": "buildings",
+   "title": "Building standards & regulations",
+   "summary": "Thermal, ventilation, and construction standards. Reduced indoor pathogen load.",
+   "co": 4,
+   "tr": 2,
+   "mechanisms": [
+    {
+     "m": "Improved indoor & outdoor air quality",
+     "t": "co-benefit",
+     "d": "Respiratory pathogens, Legionella"
+    },
+    {
+     "m": "Safe/clean water resources",
+     "t": "co-benefit",
+     "d": "Legionella"
+    },
+    {
+     "m": "Heat management",
+     "t": "co-benefit",
+     "d": "Legionella"
+    }
+   ],
+   "listed": 3,
+   "source": "4.2. Building standards and regulations"
+  },
+  {
+   "id": "4.3",
+   "family": "buildings",
+   "title": "Retrofitting & insulation",
+   "summary": "Energy-efficiency upgrades. Legionella concerns at reduced water temperatures.",
+   "co": 3,
+   "tr": 3,
+   "mechanisms": [
+    {
+     "m": "Improved indoor & outdoor air quality",
+     "t": "co-benefit",
+     "d": "Respiratory pathogens"
+    },
+    {
+     "m": "Allergies & respiratory issues",
+     "t": "trade-off",
+     "d": "Non-infectious"
+    },
+    {
+     "m": "Overheating",
+     "t": "trade-off",
+     "d": "Legionella, Salmonella"
+    }
+   ],
+   "listed": 3,
+   "source": "4.3. Retrofitting and Insulation"
+  },
+  {
+   "id": "5.1",
+   "family": "tourism",
+   "title": "Expand tourism seasons",
+   "summary": "Shoulder-season tourism. Exposure windows to seasonal vectors.",
+   "co": 2,
+   "tr": 3,
+   "mechanisms": [
+    {
+     "m": "Improved economic stability & reduced short-term migration",
+     "t": "co-benefit",
+     "d": "Indirect"
+    },
+    {
+     "m": "Reduced overcrowding",
+     "t": "co-benefit",
+     "d": "Respiratory, gastrointestinal"
+    },
+    {
+     "m": "Shift in disease patterns",
+     "t": "trade-off",
+     "d": "Vector-borne, gastrointestinal"
+    },
+    {
+     "m": "Difficulty in detecting diseases in returning travelers",
+     "t": "trade-off",
+     "d": "Dengue, chikungunya, malaria"
+    }
+   ],
+   "listed": 4,
+   "source": "5.1. Expand tourism seasons"
+  },
+  {
+   "id": "5.2",
+   "family": "tourism",
+   "title": "Expand tourism in new locations",
+   "summary": "Tourism in previously-peripheral regions. Population mixing, vector introduction.",
+   "co": 2,
+   "tr": 4,
+   "mechanisms": [
+    {
+     "m": "Reduced overcrowding",
+     "t": "co-benefit",
+     "d": "Respiratory"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Various"
+    },
+    {
+     "m": "Shift in disease patterns",
+     "t": "trade-off",
+     "d": "Vector-borne"
+    },
+    {
+     "m": "Limited capacity of healthcare system",
+     "t": "trade-off",
+     "d": "All categories"
+    }
+   ],
+   "listed": 4,
+   "source": "5.2. Expand tourism in new locations"
+  },
+  {
+   "id": "5.3",
+   "family": "tourism",
+   "title": "Tourist infrastructure improvements",
+   "summary": "Water, sanitation, accommodation standards for tourist areas.",
+   "co": 3,
+   "tr": 2,
+   "mechanisms": [
+    {
+     "m": "Reduced pressure on health services",
+     "t": "co-benefit",
+     "d": "All categories"
+    },
+    {
+     "m": "Healthy ecosystems",
+     "t": "co-benefit",
+     "d": "Various"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Various"
+    }
+   ],
+   "listed": 3,
+   "source": "5.3. Improvements in infrastructure and resources for tourists"
+  },
+  {
+   "id": "6.1",
+   "family": "transport",
+   "title": "Expand public transportation",
+   "summary": "Mass transit for decarbonisation. Respiratory transmission in crowding.",
+   "co": 3,
+   "tr": 3,
+   "mechanisms": [
+    {
+     "m": "Improved indoor & outdoor air quality",
+     "t": "co-benefit",
+     "d": "Respiratory pathogens"
+    },
+    {
+     "m": "Reduced overcrowding",
+     "t": "co-benefit",
+     "d": "Respiratory, gastrointestinal"
+    },
+    {
+     "m": "Increased contact rates & overcrowding",
+     "t": "trade-off",
+     "d": "Respiratory pathogens, gastrointestinal"
+    }
+   ],
+   "listed": 3,
+   "source": "6.1 Expand public transportation"
+  },
+  {
+   "id": "6.2",
+   "family": "transport",
+   "title": "Expand electrification",
+   "summary": "EV and rail infrastructure. Air-quality co-benefits.",
+   "co": 2,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Improved indoor & outdoor air quality",
+     "t": "co-benefit",
+     "d": "Respiratory pathogens"
+    }
+   ],
+   "listed": 1,
+   "source": "6.2 Expand electrification"
+  },
+  {
+   "id": "6.3",
+   "family": "transport",
+   "title": "Promote active mobility",
+   "summary": "Cycling, walking infrastructure. Tick exposure in greened corridors.",
+   "co": 3,
+   "tr": 2,
+   "mechanisms": [
+    {
+     "m": "Enhanced mental health & physical activity",
+     "t": "co-benefit",
+     "d": "General vulnerability reduction"
+    },
+    {
+     "m": "Improved indoor & outdoor air quality",
+     "t": "co-benefit",
+     "d": "Respiratory"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "Lyme, TBE in greened corridors"
+    },
+    {
+     "m": "Increased human presence in natural areas",
+     "t": "trade-off",
+     "d": "Tick-borne diseases"
+    }
+   ],
+   "listed": 4,
+   "source": "6.3 Promote active mobility"
+  },
+  {
+   "id": "7.1",
+   "family": "energy",
+   "title": "Hydropower expansion",
+   "summary": "New reservoir creation and vector-borne disease implications.",
+   "co": 2,
+   "tr": 4,
+   "mechanisms": [
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "WNV, malaria, Schistosomiasis"
+    },
+    {
+     "m": "Ecological disruption",
+     "t": "trade-off",
+     "d": "Various waterborne"
+    }
+   ],
+   "listed": 2,
+   "source": "5.1 Hydropower expansion"
+  },
+  {
+   "id": "barc",
+   "family": "case",
+   "title": "Barcelona — Mosquito-proofing storm drains",
+   "summary": "Honeycomb-mesh inserts and larvicide protocols. ~€90 per drain, measurable larval-density reduction.",
+   "co": 4,
+   "tr": 1,
+   "mechanisms": [
+    {
+     "m": "Disease prevention",
+     "t": "co-benefit",
+     "d": "WNV, dengue, chikungunya"
+    },
+    {
+     "m": "Habitat for disease pathogens & vectors",
+     "t": "trade-off",
+     "d": "Residual risk in non-retrofitted drains"
+    }
+   ],
+   "listed": 2,
+   "source": "Barcelona - Mosquito proofing storm drains"
+  },
+  {
+   "id": "co1.4",
+   "family": "water",
+   "title": "Co-benefit summary: safe seafood supply",
+   "summary": "Seafood safety under shifting coastal conditions. Vibrio, harmful algal blooms, cold-chain.",
+   "co": 3,
+   "tr": 2,
+   "mechanisms": [
+    {
+     "m": "Safe seafood supply",
+     "t": "co-benefit",
+     "d": "Vibriosis, Norovirus, Hepatitis A"
+    }
+   ],
+   "listed": 1,
+   "source": "Co-benefit summary 1.4 safe seafood supply"
+  }
+ ]
+}

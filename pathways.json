@@ -1,0 +1,789 @@
+{
+ "sectors": [
+  {
+   "id": "water",
+   "name": "Water management",
+   "L": {
+    "bg": "#E8F0F7",
+    "bd": "#3E7AA5",
+    "tx": "#133A5C"
+   },
+   "D": {
+    "bg": "#14232F",
+    "bd": "#4A90C2",
+    "tx": "#8FBDDE"
+   }
+  },
+  {
+   "id": "coastal",
+   "name": "Coastal & marine",
+   "L": {
+    "bg": "#E4F2EF",
+    "bd": "#2D8C82",
+    "tx": "#0F3E3A"
+   },
+   "D": {
+    "bg": "#132623",
+    "bd": "#3FAE9F",
+    "tx": "#7ECEC0"
+   }
+  },
+  {
+   "id": "food",
+   "name": "Agriculture & food",
+   "L": {
+    "bg": "#EDF4E5",
+    "bd": "#5A9340",
+    "tx": "#1F4A12"
+   },
+   "D": {
+    "bg": "#1C2818",
+    "bd": "#6FBE52",
+    "tx": "#9FCF82"
+   }
+  },
+  {
+   "id": "buildings",
+   "name": "Buildings & urban",
+   "L": {
+    "bg": "#FBF1E1",
+    "bd": "#B87D23",
+    "tx": "#6B400A"
+   },
+   "D": {
+    "bg": "#2B2316",
+    "bd": "#D4A050",
+    "tx": "#E0BC78"
+   }
+  },
+  {
+   "id": "tourism",
+   "name": "Tourism",
+   "L": {
+    "bg": "#F8E7EE",
+    "bd": "#A8427A",
+    "tx": "#66153F"
+   },
+   "D": {
+    "bg": "#261620",
+    "bd": "#C86098",
+    "tx": "#D890B0"
+   }
+  },
+  {
+   "id": "transport",
+   "name": "Transport",
+   "L": {
+    "bg": "#EEE9F6",
+    "bd": "#6F52B0",
+    "tx": "#33175F"
+   },
+   "D": {
+    "bg": "#1E1828",
+    "bd": "#9078C8",
+    "tx": "#B8A4D8"
+   }
+  },
+  {
+   "id": "energy",
+   "name": "Energy",
+   "L": {
+    "bg": "#F7EAEA",
+    "bd": "#B64747",
+    "tx": "#6B1818"
+   },
+   "D": {
+    "bg": "#2A1818",
+    "bd": "#E06868",
+    "tx": "#E89898"
+   }
+  }
+ ],
+ "measures": [
+  {
+   "id": "1.1",
+   "sector": "water",
+   "name": "Water storage & reuse"
+  },
+  {
+   "id": "1.2",
+   "sector": "water",
+   "name": "Wastewater management"
+  },
+  {
+   "id": "1.3",
+   "sector": "water",
+   "name": "Water quality monitoring"
+  },
+  {
+   "id": "1.4",
+   "sector": "water",
+   "name": "Awareness & information"
+  },
+  {
+   "id": "1.5",
+   "sector": "water",
+   "name": "Early warning systems"
+  },
+  {
+   "id": "1.6",
+   "sector": "water",
+   "name": "Flood protection"
+  },
+  {
+   "id": "2.1",
+   "sector": "coastal",
+   "name": "Marine spatial planning"
+  },
+  {
+   "id": "2.2",
+   "sector": "coastal",
+   "name": "Reduce ocean acidification"
+  },
+  {
+   "id": "2.3",
+   "sector": "coastal",
+   "name": "Fishing rules & fish health"
+  },
+  {
+   "id": "3.1",
+   "sector": "food",
+   "name": "Sustainable farming"
+  },
+  {
+   "id": "3.2",
+   "sector": "food",
+   "name": "Irrigation systems"
+  },
+  {
+   "id": "3.3",
+   "sector": "food",
+   "name": "Protect biodiversity"
+  },
+  {
+   "id": "3.4",
+   "sector": "food",
+   "name": "Expand forested areas"
+  },
+  {
+   "id": "3.5",
+   "sector": "food",
+   "name": "Plant-based diets"
+  },
+  {
+   "id": "3.6",
+   "sector": "food",
+   "name": "Food safety systems"
+  },
+  {
+   "id": "3.7",
+   "sector": "food",
+   "name": "Food safety education"
+  },
+  {
+   "id": "4.1",
+   "sector": "buildings",
+   "name": "Green & blue spaces"
+  },
+  {
+   "id": "4.2",
+   "sector": "buildings",
+   "name": "Building standards"
+  },
+  {
+   "id": "4.3",
+   "sector": "buildings",
+   "name": "Retrofitting & insulation"
+  },
+  {
+   "id": "5.1",
+   "sector": "tourism",
+   "name": "Expand tourism seasons"
+  },
+  {
+   "id": "5.2",
+   "sector": "tourism",
+   "name": "Tourism in new locations"
+  },
+  {
+   "id": "5.3",
+   "sector": "tourism",
+   "name": "Tourist infrastructure"
+  },
+  {
+   "id": "6.1",
+   "sector": "transport",
+   "name": "Public transport"
+  },
+  {
+   "id": "6.2",
+   "sector": "transport",
+   "name": "Electrification"
+  },
+  {
+   "id": "6.3",
+   "sector": "transport",
+   "name": "Active mobility"
+  },
+  {
+   "id": "7.1",
+   "sector": "energy",
+   "name": "Hydropower expansion"
+  }
+ ],
+ "mechanisms": {
+  "coBenefit": [
+   "Enhanced mental health & physical activity",
+   "Healthy ecosystems",
+   "Heat management",
+   "Improved economic stability & reduced short-term migration",
+   "Improved food safety",
+   "Improved indoor & outdoor air quality",
+   "Improved nutrition & health",
+   "Reduced animal protein consumption",
+   "Reduced antibiotics and pesticides use",
+   "Reduced exposure to flood water",
+   "Reduced human presence in natural areas",
+   "Reduced overcrowding",
+   "Reduced pressure on health services",
+   "Safe seafood supply",
+   "Safe/clean water resources"
+  ],
+  "tradeOff": [
+   "Allergies & respiratory issues",
+   "Difficulty in detecting diseases in returning travelers",
+   "Ecological disruption",
+   "Habitat for disease pathogens & vectors",
+   "Increased contact rates & overcrowding",
+   "Increased human presence in natural areas",
+   "Land use conflict",
+   "Limited capacity of healthcare system",
+   "Overheating",
+   "Shift in disease patterns",
+   "Social unrest, displacement & mental health risks"
+  ]
+ },
+ "measureMechanisms": {
+  "1.1": [
+   {
+    "mechanism": "Safe seafood supply",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   },
+   {
+    "mechanism": "Habitat for disease pathogens & vectors",
+    "type": "tr"
+   }
+  ],
+  "1.2": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced exposure to flood water",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe seafood supply",
+    "type": "co"
+   }
+  ],
+  "1.3": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe seafood supply",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   }
+  ],
+  "1.4": [
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   }
+  ],
+  "1.5": [
+   {
+    "mechanism": "Reduced exposure to flood water",
+    "type": "co"
+   }
+  ],
+  "1.6": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Improved food safety",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced exposure to flood water",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe seafood supply",
+    "type": "co"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Habitat for disease pathogens & vectors",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Social unrest, displacement & mental health risks",
+    "type": "tr"
+   }
+  ],
+  "2.1": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced exposure to flood water",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced human presence in natural areas",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe seafood supply",
+    "type": "co"
+   },
+   {
+    "mechanism": "Social unrest, displacement & mental health risks",
+    "type": "tr"
+   }
+  ],
+  "2.2": [
+   {
+    "mechanism": "Safe seafood supply",
+    "type": "co"
+   }
+  ],
+  "2.3": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe seafood supply",
+    "type": "co"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   }
+  ],
+  "3.1": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Improved food safety",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced antibiotics and pesticides use",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   },
+   {
+    "mechanism": "Habitat for disease pathogens & vectors",
+    "type": "tr"
+   }
+  ],
+  "3.2": [
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   }
+  ],
+  "3.3": [
+   {
+    "mechanism": "Enhanced mental health & physical activity",
+    "type": "co"
+   },
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Increased human presence in natural areas",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Land use conflict",
+    "type": "tr"
+   }
+  ],
+  "3.4": [
+   {
+    "mechanism": "Enhanced mental health & physical activity",
+    "type": "co"
+   },
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Heat management",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Increased human presence in natural areas",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Land use conflict",
+    "type": "tr"
+   }
+  ],
+  "3.5": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Improved nutrition & health",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced animal protein consumption",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced antibiotics and pesticides use",
+    "type": "co"
+   }
+  ],
+  "3.6": [
+   {
+    "mechanism": "Improved food safety",
+    "type": "co"
+   }
+  ],
+  "3.7": [
+   {
+    "mechanism": "Improved food safety",
+    "type": "co"
+   }
+  ],
+  "4.1": [
+   {
+    "mechanism": "Enhanced mental health & physical activity",
+    "type": "co"
+   },
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Heat management",
+    "type": "co"
+   },
+   {
+    "mechanism": "Improved indoor & outdoor air quality",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced exposure to flood water",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   },
+   {
+    "mechanism": "Allergies & respiratory issues",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Habitat for disease pathogens & vectors",
+    "type": "tr"
+   }
+  ],
+  "4.2": [
+   {
+    "mechanism": "Heat management",
+    "type": "co"
+   },
+   {
+    "mechanism": "Improved indoor & outdoor air quality",
+    "type": "co"
+   },
+   {
+    "mechanism": "Safe/clean water resources",
+    "type": "co"
+   }
+  ],
+  "4.3": [
+   {
+    "mechanism": "Improved indoor & outdoor air quality",
+    "type": "co"
+   },
+   {
+    "mechanism": "Allergies & respiratory issues",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Overheating",
+    "type": "tr"
+   }
+  ],
+  "7.1": [
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Habitat for disease pathogens & vectors",
+    "type": "tr"
+   }
+  ],
+  "6.1": [
+   {
+    "mechanism": "Improved indoor & outdoor air quality",
+    "type": "co"
+   },
+   {
+    "mechanism": "Increased contact rates & overcrowding",
+    "type": "tr"
+   }
+  ],
+  "6.2": [
+   {
+    "mechanism": "Improved indoor & outdoor air quality",
+    "type": "co"
+   }
+  ],
+  "6.3": [
+   {
+    "mechanism": "Enhanced mental health & physical activity",
+    "type": "co"
+   },
+   {
+    "mechanism": "Improved indoor & outdoor air quality",
+    "type": "co"
+   }
+  ],
+  "5.1": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Improved economic stability & reduced short-term migration",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced overcrowding",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced pressure on health services",
+    "type": "co"
+   },
+   {
+    "mechanism": "Difficulty in detecting diseases in returning travelers",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Shift in disease patterns",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Social unrest, displacement & mental health risks",
+    "type": "tr"
+   }
+  ],
+  "5.2": [
+   {
+    "mechanism": "Reduced overcrowding",
+    "type": "co"
+   },
+   {
+    "mechanism": "Difficulty in detecting diseases in returning travelers",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Limited capacity of healthcare system",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Shift in disease patterns",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Social unrest, displacement & mental health risks",
+    "type": "tr"
+   }
+  ],
+  "5.3": [
+   {
+    "mechanism": "Healthy ecosystems",
+    "type": "co"
+   },
+   {
+    "mechanism": "Reduced pressure on health services",
+    "type": "co"
+   },
+   {
+    "mechanism": "Ecological disruption",
+    "type": "tr"
+   },
+   {
+    "mechanism": "Social unrest, displacement & mental health risks",
+    "type": "tr"
+   }
+  ]
+ },
+ "mechanismCategories": {
+  "Allergies & respiratory issues": [
+   "Air-borne"
+  ],
+  "Difficulty in detecting diseases in returning travelers": [
+   "Air-borne",
+   "Animal contact",
+   "Food-borne",
+   "Mosquito-borne",
+   "Other vector-borne",
+   "Tick-borne",
+   "Water-borne"
+  ],
+  "Ecological disruption": [
+   "Animal contact",
+   "Mosquito-borne",
+   "Other vector-borne",
+   "Tick-borne"
+  ],
+  "Enhanced mental health & physical activity": [],
+  "Habitat for disease pathogens & vectors": [
+   "Animal contact",
+   "Mosquito-borne",
+   "Other vector-borne",
+   "Tick-borne"
+  ],
+  "Healthy ecosystems": [
+   "Animal contact",
+   "Mosquito-borne",
+   "Other vector-borne",
+   "Tick-borne"
+  ],
+  "Heat management": [],
+  "Improved economic stability & reduced short-term migration": [],
+  "Improved food safety": [
+   "Food-borne"
+  ],
+  "Improved indoor & outdoor air quality": [
+   "Air-borne"
+  ],
+  "Improved nutrition & health": [],
+  "Increased contact rates & overcrowding": [
+   "Air-borne"
+  ],
+  "Increased human presence in natural areas": [
+   "Animal contact",
+   "Mosquito-borne",
+   "Other vector-borne",
+   "Tick-borne"
+  ],
+  "Land use conflict": [],
+  "Limited capacity of healthcare system": [],
+  "Overheating": [],
+  "Reduced animal protein consumption": [
+   "Food-borne"
+  ],
+  "Reduced antibiotics and pesticides use": [
+   "Anti-microbial resistance"
+  ],
+  "Reduced exposure to flood water": [
+   "Food-borne",
+   "Water-borne"
+  ],
+  "Reduced human presence in natural areas": [
+   "Animal contact",
+   "Mosquito-borne",
+   "Other vector-borne",
+   "Tick-borne"
+  ],
+  "Reduced overcrowding": [
+   "Air-borne"
+  ],
+  "Reduced pressure on health services": [],
+  "Safe seafood supply": [
+   "Food-borne"
+  ],
+  "Safe/clean water resources": [
+   "Food-borne",
+   "Water-borne"
+  ],
+  "Shift in disease patterns": [
+   "Air-borne",
+   "Animal contact",
+   "Food-borne",
+   "Mosquito-borne",
+   "Other vector-borne",
+   "Tick-borne",
+   "Water-borne"
+  ],
+  "Social unrest, displacement & mental health risks": []
+ },
+ "categories": [
+  "Mosquito-borne",
+  "Tick-borne",
+  "Other vector-borne",
+  "Water-borne",
+  "Food-borne",
+  "Animal contact",
+  "Air-borne",
+  "Anti-microbial resistance"
+ ]
+}
