@@ -320,7 +320,7 @@ async function sendMessage(q) {
   try {
     const history = S.activeSession.messages
       .filter((m) => m.role === 'user' || m.role === 'assistant')
-      .map((m) => ({ role: m.role, content: stripTags(m.content) }))
+      .map((m) => ({ role: m.role, content: stripTags(m.english || m.content) }))
       .slice(0, -1);
 
     const res = await fetch(API_URL + '/ask', {
@@ -344,7 +344,13 @@ async function sendMessage(q) {
     const meta = { ...data.meta };
     chat.insertAdjacentHTML('beforeend',
       renderMsg('assistant', body, time, meta, null, data.sources));
-    S.activeSession.messages.push({ role: 'assistant', content: body, time, meta, sources: data.sources });
+    // content is what the reader sees; english is what the model reads back.
+    // On a non-English session those differ, and feeding the model its own
+    // translated output makes it answer in that language next turn.
+    S.activeSession.messages.push({
+      role: 'assistant', content: body, english: data.english_answer || body,
+      time, meta, sources: data.sources,
+    });
     save();
     renderSessionInfo();
     scrollChat();
@@ -428,7 +434,8 @@ async function downloadBriefing() {
   try {
     await downloadFile('/briefing', {
       history: S.activeSession.messages.map((m) => ({
-        role: m.role, content: m.content, route: m.meta && m.meta.route, sources: m.sources,
+        role: m.role, content: m.english || m.content,
+        route: m.meta && m.meta.route, sources: m.sources,
       })),
       audience: cfg.audience, country: cfg.country, language: cfg.language,
     }, 'IDAlert_Briefing_' + new Date().toISOString().slice(0, 10) + '.pdf',
