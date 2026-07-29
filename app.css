@@ -23,7 +23,7 @@ body.dark{
   --disease:#A78BFA;--disease-light:#2D1B69;--disease-dark:#C4B5FD;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;font-size:14px;line-height:1.55;transition:background .3s,color .3s}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;height:100vh;height:100dvh;overflow:hidden;display:flex;flex-direction:column;font-size:14px;line-height:1.55;transition:background .3s,color .3s}
 .container{max-width:960px;margin:0 auto;padding:0 24px;width:100%}
 .container-wide{max-width:1200px;margin:0 auto;padding:0 24px;width:100%}
 
@@ -49,9 +49,12 @@ nav.main-nav{background:var(--surface);border-bottom:1px solid var(--border);pos
 
 /* MAIN */
 main{flex:1;display:flex;flex-direction:column;min-height:0}
-.tab-panel.active#tab-scenario{display:flex;flex-direction:column;flex:1;min-height:0}
+.tab-panel.active#tab-scenario{display:flex;flex-direction:column;overflow:hidden}
+#scenario-landing{flex:1;min-height:0;overflow-y:auto}
 #scenario-conversation{display:flex;flex-direction:column;flex:1;min-height:0}
-.tab-panel{display:none}.tab-panel.active{display:block;animation:fadeIn .3s ease}
+body:has(#scenario-conversation:not(.hidden)) footer.app-footer{display:none}
+.tab-panel{display:none}
+.tab-panel.active{display:block;flex:1;min-height:0;overflow-y:auto;animation:fadeIn .3s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
 /* HERO */
@@ -111,18 +114,18 @@ body.dark .evidence-tags span:hover{background:rgba(255,255,255,.15)}
 /* Conversation is two columns: the transcript scrolls on the left, session
    context and actions sit in a static panel on the right. Below 1000px the
    panel reflows into a single strip above the transcript. */
-.session-layout{display:flex;gap:34px;flex:1;min-height:0}
+.session-layout{display:flex;gap:36px;flex:1;min-height:0}
 .session-main{display:flex;flex-direction:column;flex:1;min-width:0}
 .chat-scroll{flex:1;overflow-y:auto;min-height:0}
 .chat-area{padding:24px 0 8px}
-.session-panel{width:200px;flex-shrink:0;display:flex;flex-direction:column;justify-content:space-between;padding:16px 0 34px}
+.session-panel{width:220px;flex-shrink:0;display:flex;flex-direction:column;justify-content:space-between;padding:34px 0 34px}
 .panel-context{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:background .3s,border-color .3s}
-.session-info{font-size:12px;color:var(--text-secondary);padding:11px 14px;border-bottom:1px solid var(--border-light)}
-.panel-settings{display:grid;grid-template-columns:auto 1fr;gap:9px 10px;margin:0;padding:12px 14px;font-size:13px}
+.session-info{font-size:12.5px;color:var(--text-secondary);padding:13px 16px;border-bottom:1px solid var(--border-light)}
+.panel-settings{display:grid;grid-template-columns:auto 1fr;gap:13px 10px;margin:0;padding:16px;font-size:14px}
 .panel-settings dt{color:var(--text-tertiary)}
 .panel-settings dd{margin:0;text-align:right;color:var(--text)}
 .panel-actions{display:flex;flex-direction:column;gap:8px}
-.panel-btn{display:flex;align-items:center;gap:10px;width:100%;padding:11px 14px;font-family:var(--sans);font-size:13.5px;text-align:left;color:var(--text-secondary);background:var(--surface);border:1px solid var(--border);border-radius:9px;cursor:pointer;transition:all .15s}
+.panel-btn{display:flex;align-items:center;gap:10px;width:100%;padding:13px 16px;font-family:var(--sans);font-size:14px;text-align:left;color:var(--text-secondary);background:var(--surface);border:1px solid var(--border);border-radius:9px;cursor:pointer;transition:all .15s}
 .panel-btn:hover{border-color:var(--accent);color:var(--text);background:var(--surface)}
 .panel-btn svg{width:16px;height:16px;flex-shrink:0}
 .panel-btn:disabled{opacity:.4;cursor:not-allowed}
@@ -198,7 +201,7 @@ body.dark .source-score.ecdc{background:rgba(33,150,243,.15);color:#90caf9}
 .followup-input .container{position:relative}
 .composer{display:flex;align-items:flex-end;gap:8px;padding:8px 8px 8px 16px;background:var(--surface);border:1px solid var(--border);border-radius:14px;transition:border-color .15s,background .3s}
 .composer:focus-within{border-color:var(--accent)}
-.composer textarea{flex:1;border:none;outline:none;resize:none;background:transparent;color:var(--text);font-family:var(--sans);font-size:14.5px;line-height:1.5;padding:7px 0;max-height:160px;overflow-y:auto}
+.composer textarea{flex:1;border:none;outline:none;resize:none;background:transparent;color:var(--text);font-family:var(--sans);font-size:14.5px;line-height:1.5;padding:7px 0;min-height:112px;max-height:220px;overflow-y:auto}
 .composer textarea::placeholder{color:var(--text-tertiary)}
 .composer-send{flex-shrink:0;width:34px;height:34px;border:none;border-radius:9px;background:var(--accent);color:#fff;cursor:pointer;font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .15s}
 .composer-send:hover{background:var(--accent-dark)}
